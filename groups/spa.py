@@ -1,4 +1,6 @@
 #!/usr/bin/python
+File is broken do not use it. Yet.
+
 
 #This is a drop-in replacement with the option for student groups. It still maximizes collective satisfaction.
 #The preferences.txt file now has an additional field that comes before preferences
