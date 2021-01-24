@@ -34,7 +34,7 @@ def csvInit(filename):
       if row[0]=='Project Definitions':
          reader.next() #Skip Headers
       elif row[0]=='':
-         break 
+         break
       else:
          sourceid = row[0]
          limit = int(row[1])
@@ -161,6 +161,8 @@ def SPA():
       if isProjectFull(pj):
          Student[si]['projects'].remove(pj)     #delete pj from si's list
       else:
+         if (lk==None):
+          lk="Sobelman" #there's a weird bug where for project 9, Professor Sobelman's name gets purged from the keypairs
          AddToM(si,lk,pj)
          if isLecturerOversubscribed(lk):
             pz = getWorstNonEmptyProject(lk)    #lk's worst non-empty project
@@ -182,8 +184,8 @@ def SPA():
 
 #Main
 
-print("MComp")
-csvInit("Double_Projects.csv")
+print("Projects")
+csvInit("preferences.csv")
 SPA()
 MCompWorkload={}
 for m in M:
@@ -193,8 +195,8 @@ for m in M:
    id = m['projectid']
    p = Project[id]['title']
    c = Project[id]['sourceid']
-   r = str(getRank("Double_Projects.csv",s,c))
-   print(s+","+l+","+p+","+c+","+r)
+   r = str(getRank("preferences.csv",s,c))
+   print(s+" will work on \t"+p+",\ttheir "+'#'+r+" choice")
 
 print
 print("Unassigned Students")
@@ -202,35 +204,3 @@ for s in sample(Student,len(Student)):
    if not isStudentAssigned(s):
       print s
 
-print
-print("BSc")
-csvInit("Single_Projects.csv")
-for l in MCompWorkload:
-   limit=Lecturer[l]['limit'] - (MCompWorkload[l]*2)
-   if limit<=0:
-      del Lecturer[l]
-   else:
-      Lecturer[l]['limit']=limit
-SPA()
-for m in M:
-   s = m['student']
-   l = m['lecturer']
-   Lecturer[l]['limit'] = Lecturer[l]['limit'] - 1
-   id = m['projectid']
-   p = Project[id]['title']
-   c = Project[id]['sourceid']
-   r = str(getRank("Single_Projects.csv",s,c))
-   print(s+","+l+","+p+","+c+","+r)
-
-print
-print("Unassigned Students")
-for s in sample(Student,len(Student)):
-   if not isStudentAssigned(s):
-      print s
-
-print
-print("Remaining Capacity")
-for l in Lecturer:
-   limit=Lecturer[l]['limit']
-   if(limit>0):
-      print(l+" has "+str(limit)+" supervisions free")
