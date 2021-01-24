@@ -4,8 +4,10 @@ Student Project Allocation.
 
 http://www.dcs.gla.ac.uk/publications/PAPERS/7952/spa-acid.pdf
 ^ this link doesn't work and I couldn't find the paper^
+But it looks similar to the algorithm demostrated on page 12 of
+https://peer.asee.org/an-algorithm-for-project-assignment-in-capstone-design.pdf
 
-Sina here, our EE4951W class had 100 students pick their top 10 projects out of 18 for groups of 6, and it doesn't take a binomial expansion to realize that's a lot of options!
+Our EE4951W class had 100 students pick their top 10 projects out of 18 for groups of 6, and it doesn't take a binomial expansion to realize that's a lot of options!
 This algorithm will assign top choices 90% of the time if the choices are truly random. However, assuming one project is very popular, 90% will get at least their 2nd choice.
 I provide the example data where random numbers were generated for preferences.
 
@@ -23,7 +25,19 @@ I then said "YOLO YOLO YOLO" and ran the same simulation on the top 3 picks and 
 ![alt text](https://github.com/rgbbytes/SPA/blob/master/statistics/histogram3.png?raw=true)
 
 
-To do it yyourself, go to Canvas, select all names from the class and place in a text file called names.txt and clean it using something like
+
+
+
+
+
+
+
+
+
+
+
+
+To create a pseudo-dataset, go to Canvas, select all names from the class and place in a text file called names.txt and clean it using something like
 
     cat namesMessy.txt | grep -v "\t" | grep -v 2021 | grep -v Student | grep -v Teacher > names.txt
 
