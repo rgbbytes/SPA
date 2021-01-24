@@ -16,11 +16,11 @@ Since it runs a randomizer, you can run it a hundred times and get different res
 In fact, I said "just YOLO it" and did it 1,000 times and got a normal distribution for the #1 choice assignments for a pool of 120 people (I ended up adding professors in the Canvas class as students too and didn't take them out).
 As you can see, most of the class can be satisfied and if you keep running it, you can ensure everyone gets their top pick!
 
-![alt text](https://github.com/rgbbytes/SPA/blob/master/histogram.png?raw=true)
+![alt text](https://github.com/rgbbytes/SPA/blob/master/statistics/histogram.png?raw=true)
 
 I then said "YOLO YOLO YOLO" and ran the same simulation on the top 3 picks and look what happens to satisfaction!
 
-![alt text](https://github.com/rgbbytes/SPA/blob/master/histogram3.png?raw=true)
+![alt text](https://github.com/rgbbytes/SPA/blob/master/statistics/histogram3.png?raw=true)
 
 
 To do it yyourself, go to Canvas, select all names from the class and place in a text file called names.txt and clean it using something like
