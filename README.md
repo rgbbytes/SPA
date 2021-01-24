@@ -3,9 +3,10 @@ Student Project Allocation.
 * NB. This implementation untested.
 
 http://www.dcs.gla.ac.uk/publications/PAPERS/7952/spa-acid.pdf
+^ this link doesn't work and I couldn't find the paper^
 
 Sina here, our EE4951W class had 100 students pick their top 10 projects out of 18 for groups of 6, and it doesn't take a binomial expansion to realize that's a lot of options!
-This algorithm will assign top choices 100% of the time if the choices are truly random. However, assuming one project is very popular, 90% will get at least their 2nd choice.
+This algorithm will assign top choices 90% of the time if the choices are truly random. However, assuming one project is very popular, 90% will get at least their 2nd choice.
 I provide the example data where random numbers were generated for preferences.
 
 Just run python2 spa.py and it will use preferences.csv to assign groups.
