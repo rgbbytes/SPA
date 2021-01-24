@@ -1,5 +1,10 @@
 #!/usr/bin/python
 
+#This is a drop-in replacement with the option for student groups. It still maximizes collective satisfaction.
+#The preferences.txt file now has an additional field that comes before preferences
+#To implement a group, simply write "group name","group quantity","1st pick","2nd pick",etc.
+#To implement a student, simply write "student name","1","1st pick","2nd pick",etc.
+
 import csv
 from random import sample, shuffle
 
@@ -123,7 +128,6 @@ def isLecturerOversubscribed(l):
 def isProjectAllocated(p):
    for m in M:
       if m['projectid']==p:
-         print m
          return True
    return False
 
