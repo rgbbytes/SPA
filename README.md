@@ -14,6 +14,8 @@ You will end up with unassigned and poorly assigned students and in this case, y
 Since it runs a randomizer, you can run it a hundred times and get different results.
 In fact, I said "just YOLO it" and did it 1,000 times and got a normal distribution.
 
+![alt text](https://github.com/rgbbytes/SPA/blob/master/histogram.png?raw=true)
+
 
 
 To do it yyourself, go to Canvas, select all names from the class and place in a text file called names.txt and clean it using something like
