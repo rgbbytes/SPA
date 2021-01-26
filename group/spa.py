@@ -172,7 +172,7 @@ def SPA():
    while(si!=None):
       pj=Student[si]['projects'][0]             #first project of si's list
       lk=getLecturerOffering(pj)                #lecturer who offers pj
-      if isProjectFull(pj) and getProjectVacancy(pj)+1>Student[si]['size']:
+      if isProjectFull(pj) or getProjectVacancy(pj)<Student[si]['size']:
          Student[si]['projects'].remove(pj)     #delete pj from si's list
       else:
          if (lk==None):
